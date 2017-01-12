@@ -1,0 +1,34 @@
+{
+  "name": "node-todo-api",
+  "version": "1.0.0",
+  "description": "A Todo List Api",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec npm test",
+    "start": "node server/server.js"
+  },
+  "engines": {
+    "node": "6.7.0"
+  },
+  "keywords": [
+    "todo",
+    "node",
+    "mongodb",
+    "node.js"
+  ],
+  "author": "Gabriel Lewis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.19",
+    "mongoose": "^4.7.6"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "supertest": "^2.0.1"
+  }
+}
