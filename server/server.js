@@ -33,7 +33,7 @@ app.post('/todos', (req, res) => {
 app.get('/todos/:id', (req, res) => {
   var id = req.params.id;
 
-  if (!ObjectID.isValid(id)) {
+  if (!ObjectID.isInvalid(id)) {
     return res.status(404).send('404 page not found')
   }
 
@@ -44,6 +44,20 @@ app.get('/todos/:id', (req, res) => {
     res.send({todo});
   }).catch((e) => res.send(e))
 });
+
+app.delete('todos/:id', (req, res) => {
+  const id = req.params.id;
+  if (ObjectID.isInvalid(id)) {
+    return res.status(404).send('404 page not found')
+  }
+
+  Todo.findById(id).then((todo) => {
+    if (!todo) {
+      return res.status(404).send('404 page not found')
+    }
+  }
+  Todo.removeById()
+})
 
 app.listen(port)
 
