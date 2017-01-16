@@ -4,7 +4,7 @@
   "description": "A Todo List Api",
   "main": "app.js",
   "scripts": {
-    "test": "mocha server/**/*.test.js",
+    "test": "export NODE_ENV=test && mocha server/**/*.test.js",
     "test-watch": "nodemon --exec npm test",
     "start": "node server/server.js"
   },
@@ -22,9 +22,11 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "jsonwebtoken": "^7.2.1",
     "lodash": "^4.17.4",
     "mongodb": "^2.2.19",
-    "mongoose": "^4.7.6"
+    "mongoose": "^4.7.6",
+    "validator": "^6.2.1"
   },
   "devDependencies": {
     "expect": "^1.20.2",
