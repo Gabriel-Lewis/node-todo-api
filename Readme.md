@@ -2,6 +2,7 @@
 
 My experiments with creating an API with Node.js and MongoDB
 
+Below is an example of the a todo action
 
 ```javascript
 describe("POST /todos", () => {
